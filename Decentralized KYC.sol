@@ -36,11 +36,7 @@ contract KYC{
      mapping (string => Customer)customersDetails; // Mapping a customer's username to the Customer
 
    
-
-
-
-
- /**
+   /**
      *
      *  Name        :   areBothStringSame
      *  Description :   This is an internal function is verify equality of strings
@@ -85,8 +81,7 @@ contract KYC{
      **/
          
     
-
-    function blockBankFromKYC(address add) public onlyadmin returns(int){
+     function blockBankFromKYC(address add) public onlyadmin returns(int){
         require(banks[add].Address != address(0),"Bank not found");
         banks[add].kycPrivilege =false;
         return 1;
@@ -109,7 +104,7 @@ contract KYC{
     }
 
 
-      /**
+     /**
      *
      *  Name        :   blockBankFromAddingNewCustomers
      *  Description :   This function can only be used by the admin to block any bank to add any new customer.
@@ -127,12 +122,7 @@ contract KYC{
     }
 
     
-
-
-
-
-
-/**
+   /**
      *
      *  Name        :   allowBankFromAddingNewCustomers
      *  Description :   This function can only be used by the admin to allow any bank to add any new           customer.
